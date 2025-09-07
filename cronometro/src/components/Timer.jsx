@@ -4,7 +4,6 @@ import TimerDisplay from './TimerDisplay'
 import LapList from './LapList'
 
 import './Timer.scss'
-import { use } from 'react'
 
 const Timer = () => {
     const [milliseconds, setMilliseconds] = useState(0); // 1 hour in milliseconds for testing
