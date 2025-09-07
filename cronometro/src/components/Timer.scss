@@ -1,0 +1,118 @@
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: #0d0d0d;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+
+  .timer-display {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .timer-controls {
+    display: flex;
+    gap: 10px;
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+
+      &.start-button {
+        background-color: #28a745;
+
+        &:hover {
+          background-color: #218838;
+        }
+      }
+
+      &.stop-button {
+        background-color: #dc3545;
+
+        &:hover {
+          background-color: #c82333;
+        }
+      }
+
+      &.reset-button {
+        background-color: #6c757d;
+
+        &:hover {
+          background-color: #5a6268;
+        }
+      }
+
+      &.save-button {
+        background-color: #007bff;
+
+        &:hover {
+          background-color: #0069d9;
+        }
+      }
+    }
+  }
+
+  .timer-laps {
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+
+    .laps-header {
+        font-size: 1.2em;
+        color: #ff9500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .reset-laps-button {
+          margin-left: 10px;
+          padding: 5px 10px;
+          font-size: 0.8em;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          color: white;
+          background-color: #dc3545;
+          float: right;
+
+          &:hover {
+            background-color: #c82333;
+          }
+        }
+    }
+
+    ul {
+      overflow-y: auto;
+      max-height: 150px;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid #515151;
+
+      li {
+        padding: 5px 0;
+        // border-bottom: 1px solid #999999;
+
+        &:nth-child(4n + 1) {
+          background: #333;
+        }
+        &:nth-child(4n) {
+          background: #333;
+        }
+      }
+    }
+  }
+}
